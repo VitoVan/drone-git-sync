@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 mkdir ~/.ssh/ 
 echo $PLUGIN_SSH_KEY | base64 -d > ~/.ssh/key
