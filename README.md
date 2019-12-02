@@ -22,3 +22,5 @@ steps:
 ```bash
 cat ~/.ssh/id_rsa | base64
 ```
+
+> Make sure your key does not need a password, otherwise sync will fail
