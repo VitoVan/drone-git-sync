@@ -19,6 +19,11 @@ steps:
         from_secret: ssh_key
 ```
 
+Optional settings:
+
+  - push_arg: ''
+      You can set this to `--force` to get `git push --force ...`
+
 ## How to set SSH key
 
 ```bash

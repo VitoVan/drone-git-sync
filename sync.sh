@@ -14,4 +14,4 @@ git clone --mirror $PLUGIN_REPO_FROM from.git
 cd from.git
 git remote add --mirror=fetch to $PLUGIN_REPO_TO
 git fetch origin
-git push to --all
+git push $PLUGIN_PUSH_ARG to --all
