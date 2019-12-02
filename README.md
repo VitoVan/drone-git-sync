@@ -1,3 +1,5 @@
+![Drone Git Sync Icon](https://github.com/VitoVan/drone-git-sync/raw/master/iconfile.png)
+
 # drone-git-sync
 
 This [Drone](https://drone.io/) plugin allows you to keep two Git repositories in sync
@@ -36,3 +38,8 @@ docker run -it --rm \
 ```
 
 > This will prompt you to enter your password, if you have one
+
+
+### Credits
+
+- Icon made by [smalllikeart](https://www.flaticon.com/authors/smalllikeart) from www.flaticon.com
