@@ -9,7 +9,7 @@ This [Drone](https://drone.io/) plugin allows you to keep two Git repositories i
 ```yaml
 steps:
   - name: sync
-    image: vitovan/drone-git-sync
+    image: vitovan/drone-git-sync:latest
     settings:
       repo_from: git@github.com:vitovan/drone-git-sync.git
       repo_to: git@gitlab.com:vitovan/drone-git-sync.git
@@ -23,4 +23,16 @@ steps:
 cat ~/.ssh/id_rsa | base64
 ```
 
-> Make sure your key does not need a password, otherwise sync will fail
+> Make sure your key does not need a password, otherwise see below
+
+## How to use this without Drone
+
+```bash
+docker run -it --rm \
+       -e=PLUGIN_SSH_KEY=`cat ~/.ssh/id_rsa | base64` \
+       -e=PLUGIN_REPO_FROM=git@github.com:vitovan/drone-git-sync.git \
+       -e=PLUGIN_REPO_TO=git@gitlab.com:vitovan/drone-git-sync.git \
+       vitovan/drone-git-sync:latest
+```
+
+> This will prompt you to enter your password, if you have one
